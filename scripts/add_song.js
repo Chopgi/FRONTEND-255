@@ -15,7 +15,7 @@ async function addSong() {
       : [], //if able to split the genre into an array, otherwise make it an array of one item.
   };
 
-  const response = await fetch("http://localhost:3000/api/songs", {
+  const response = await fetch("https://privbackend-255.onrender.com/api/songs/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
