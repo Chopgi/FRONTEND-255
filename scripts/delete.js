@@ -18,9 +18,12 @@ async function getAllSongs() {
 async function deleteSong() {
   //get the song id
   const songID = document.querySelector("#songDropDown option:checked").value; //each value will be the song if of the title we checkced
-  const response = await fetch("http://localhost:3000/api/songs/" + songID, {
-    method: "DELETE",
-  });
+  const response = await fetch(
+    "https://privbackend-255.onrender.com/api/songs" + songID,
+    {
+      method: "DELETE",
+    },
+  );
   if (response.ok) {
     getAllSongs();
     alert("Song deleted.");
