@@ -13,6 +13,7 @@ async function addSong() {
     genre: document.querySelector("#genre").value
       ? document.querySelector("#genre").value.split(",")
       : [], //if able to split the genre into an array, otherwise make it an array of one item.
+    username: localStorage.getItem("uname"),
   };
 
   const response = await fetch("http://localhost:3000/api/songs", {

@@ -1,12 +1,13 @@
 let token;
-
-document
-  .querySelector("#loginBtn")
-  .addEventListener("click", async function () {
-    const username = document.querySelector("#username").value;
-    const password = document.querySelector("#password").value;
-    login(username, password);
-  });
+window.onload = function () {
+  document
+    .querySelector("#loginBtn")
+    .addEventListener("click", async function () {
+      const username = document.querySelector("#username").value;
+      const password = document.querySelector("#password").value;
+      login(username, password);
+    });
+};
 
 async function login(username, password) {
   const login_cred = {
