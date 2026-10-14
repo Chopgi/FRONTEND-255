@@ -4,7 +4,7 @@ addEventListener("DOMContentLoaded", async function () {
 });
 
 async function getAllSongs() {
-  const response = await fetch("http://localhost:3000/api/songs");
+  const response = await fetch("https://privbackend-255.onrender.com/api/songs");
   if (response.ok) {
     const songs = await response.json();
     let html = "";
