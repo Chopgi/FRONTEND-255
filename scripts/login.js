@@ -15,13 +15,16 @@ async function login(username, password) {
     password,
   };
   //send the credentials to the backend
-  const response = await fetch("http://localhost:3000/api/auth/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
+  const response = await fetch(
+    "https://privbackend-255.onrender.com/api/auth/",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(login_cred),
     },
-    body: JSON.stringify(login_cred),
-  });
+  );
   if (response.ok) {
     //take the token and save it to storage
     const tokenResponse = await response.json();
