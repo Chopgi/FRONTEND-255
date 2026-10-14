@@ -1,6 +1,8 @@
 //we are going to make an event listener.. it will trigger with the DOM is loaded (aka upon visiting webpage)
 addEventListener("DOMContentLoaded", async function () {
-  const response = await fetch("https://privbackend-255.onrender.com/api/songs");
+  const response = await fetch(
+    "https://privbackend-255.onrender.com/api/songs/",
+  );
   const songs = await response.json();
 
   let html = "";
