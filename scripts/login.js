@@ -38,7 +38,7 @@ async function login(username, password) {
     localStorage.setItem("uname", uname);
     localStorage.setItem("auth", auth);
     //redirect
-    window.location.replace("/index.html");
+    window.location.replace("./index.html");
   } else {
     document.querySelector("#errorMsg").innerHTML = "Bad username and Password";
   }
