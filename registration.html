@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Front End Registration</title>
-    <script defer src="scripts/login.js"></script>
+    <script defer src="scripts/register.js"></script>
     
 </head>
 <body>
@@ -16,12 +16,16 @@
     <h1>Registation Page</h1>
     <form id="register" autocomplete="off">
         <div>
-            <label for="username">username:</label>
+            <label for="username">Username:</label>
             <input type="text" id="username">
         </div>
         <div>
             <label for="password">Password:</label>
             <input type="text" id="password">
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <input type="text" id="status">
         </div>
         <button id="registerBtn" type="button">Complete registration</button>
         <p id="errorMsg"></p>
